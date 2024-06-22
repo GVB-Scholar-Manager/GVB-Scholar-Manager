@@ -1,4 +1,4 @@
-# Documentação da API de Autenticação
+# Documentação da API
 
 ## Endpoints
 
