@@ -8,6 +8,12 @@ use Tymon\JWTAuth\Exceptions\JWTException;
 
 class AuthController
 {
+    /**
+     * Handle user login.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function login(Request $request)
     {
         $missingFields = [];
@@ -34,6 +40,12 @@ class AuthController
         return response()->json(compact('token'));
     }
 
+    /**
+     * Logout the user.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function logout(Request $request)
     {
         try {
