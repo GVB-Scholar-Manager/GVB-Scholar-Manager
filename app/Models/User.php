@@ -64,13 +64,27 @@ class User extends Authenticatable implements JWTSubject
             'password' => 'hashed',
         ];
     }
+    /**
+     * Get the identifier that will be stored in the JWT token.
+     *
+     * @return mixed
+     */
     public function getJWTIdentifier()
     {
         return $this->getKey();
     }
 
+    /**
+     * Get the custom claims for JWT authentication.
+     *
+     * @return array
+     */
     public function getJWTCustomClaims()
     {
-        return [];
+        return [
+            'user_id' => $this->id,
+            'email' => $this->email,
+            'name'  => $this->name,
+        ];
     }
 }

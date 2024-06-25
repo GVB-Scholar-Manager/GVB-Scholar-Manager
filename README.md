@@ -2,7 +2,7 @@
 
 ## Endpoints
 
-### POST /login
+### POST /auth/login
 
 Autentica um usuário com base no email e senha fornecidos.
 
@@ -42,7 +42,7 @@ Autentica um usuário com base no email e senha fornecidos.
     }
     ```
 
-### POST /logout
+### POST /auth/logout
 
 Invalida o token JWT do usuário, efetuando o logout.
 
